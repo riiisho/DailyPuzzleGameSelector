@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Puzzle Game Selector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">Today’s Challenge</p>
+        <h1>Daily Puzzle Game Selector</h1>
+        <p class="subtext">Tap randomize and let the wheel decide what puzzle you play next.</p>
+      </header>
+
+      <section class="selector" aria-live="polite">
+        <div class="slot-viewport">
+          <div id="slot-track" class="slot-track"></div>
+          <div class="slot-fade slot-fade--left"></div>
+          <div class="slot-fade slot-fade--right"></div>
+          <div class="slot-center-indicator"></div>
+        </div>
+        <a id="selected-link" class="selected-link is-hidden" href="#" target="_blank" rel="noopener noreferrer">
+          Play now
+        </a>
+        <button id="randomize-btn" class="randomize-btn" type="button">Randomize</button>
+      </section>
+
+      <section class="games" aria-labelledby="games-heading">
+        <h2 id="games-heading">Game List</h2>
+        <ul id="game-list"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
